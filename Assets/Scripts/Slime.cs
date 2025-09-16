@@ -3,7 +3,7 @@ using UnityEngine;
 //En slime implementa un constructor sobrecargado de operadores que permita sumar su vida con otro slime para crear uno nuevo
 public class Slime
 {
-    public int Life = 15;
+    public int Life;
 
     public Slime(int _Life)
     {
