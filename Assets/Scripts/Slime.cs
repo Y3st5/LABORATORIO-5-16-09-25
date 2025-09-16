@@ -1,16 +1,17 @@
+using Unity.VisualScripting;
 using UnityEngine;
-
-public class Slime : MonoBehaviour
+//En slime implementa un constructor sobrecargado de operadores que permita sumar su vida con otro slime para crear uno nuevo
+public class Slime
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public int Life = 15;
+
+    public Slime(int _Life)
     {
-        
+        Life = _Life;
     }
 
-    // Update is called once per frame
-    void Update()
+    public static Slime operator +(Slime s1, Slime s2)
     {
-        
+        return new Slime(s1.Life + s2.Life);
     }
 }
